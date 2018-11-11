@@ -64,7 +64,7 @@ function updateProduct(req, res) {
 }
 
 function deleteProduct(req, res) {
-    db.none('DELETE FROM products where product_id =' + req.params.id,
+    db.none('delete FROM products where product_id =' + req.params.id,
         req.body)
         .then(function (data) {
             res.status(200)
@@ -141,7 +141,7 @@ function updatePurchase_item(req, res) {
 }
 
 function DeletePurchase_item(req, res) {
-    db.any('DELETE from purchase_items where id=' + req.params.id)
+    db.any('delete from purchase_items where id=' + req.params.id)
         .then(function (data) {
             res.status(200)
                 .json({
@@ -215,7 +215,7 @@ function updatePurchase(req, res) {
         })
 }
 function DeletePurchase(req, res) {
-    db.any('DELETE from purchases where purchase_id=' + req.params.id)
+    db.any('delete from purchases where purchase_id=' + req.params.id)
         .then(function (data) {
             res.status(200)
                 .json({
@@ -279,7 +279,7 @@ function insertUser(req, res) {
     
 }
 function DeleteUser(req, res) {
-    db.any('DELETE from users where user_id=' + req.params.id)
+    db.any('delete from users where user_id=' + req.params.id)
         .then(function (data) {
             res.status(200)
                 .json({
