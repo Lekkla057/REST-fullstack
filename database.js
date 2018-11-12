@@ -256,10 +256,9 @@ function getUserByID(req, res) {
                 });
         })
         .catch(function (error) {
-            res.status(500)
-                .json({ status: "fail", message: "Mission Fail get back" })
             console.log('ERROR:', error)
         })
+
 }
 function insertUser(req, res) {
     db.any('insert into users(user_id,email,password,details,created_at)' +
